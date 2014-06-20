@@ -1,0 +1,18 @@
+<Alloy>
+	<TabGroup barColor="#d21100" tabsBackgroundColor="#444" tabsTintColor="#ffffff">
+		<Tab id="tabNews" title="News" icon="news.png">
+			<Require id="master" src="master"/>
+		</Tab>
+		<Tab title="Chi Siamo" icon="info.png">
+			<Require id="about" src="about"/>
+		</Tab>
+		<Tab title="Contatti" icon="contatti.png">
+			<Window title="Contatti">
+				<WebView id="contattiView" url="contatti.html" />
+			</Window>
+		</Tab>
+		<Tab title="Dona" icon="dona.png">
+			<Require id="paypal" src="paypal"/>
+		</Tab>
+	</TabGroup>
+</Alloy>

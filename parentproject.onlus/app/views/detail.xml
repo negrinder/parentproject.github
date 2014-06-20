@@ -1,0 +1,8 @@
+<Alloy>
+	<Window layout="vertical">
+		<Button id="backButton" title='Torna alle notizie'/>
+		<Label id="titolo"/>
+		<WebView id="contenuto"/>
+		<Button id="goButton" title='Leggi tutta la notizia'/>
+	</Window>
+</Alloy>

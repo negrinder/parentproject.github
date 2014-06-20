@@ -1,0 +1,35 @@
+"Window": {
+	backgroundColor: "#f4f4f4",
+	titleAttributes: {
+		color: "#ffffff"
+	},
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
+}
+
+"#backButton": {
+	top: 10,
+	tintColor: "#e60a2e"
+}
+
+"#titolo": {
+    top: 10,
+	font: {
+        fontSize: '16dp',
+        fontWeight: 'bold'
+    },	
+    textAlign: 'center'
+}
+
+"WebView": {
+	top: 20,
+	left: 10,
+	right: 10,
+	fullscreen: false,
+    height: '70%'
+}
+
+"#goButton": {
+	top: 10,
+	tintColor: "#1b7db1"
+}
+
