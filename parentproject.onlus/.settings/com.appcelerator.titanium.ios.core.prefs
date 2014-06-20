@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=Parent Project Onlus
+iosLaunchConfigurationAttributes/appid=parentproject.onlus
+iosLaunchConfigurationAttributes/certificate=Andrea Negroni (FNFFYAK8V9)
+iosLaunchConfigurationAttributes/distribute_path=/Users/andrea/Downloads/publish
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/output_format=ipa
+iosLaunchConfigurationAttributes/sdk_version=7.1
+iosLaunchConfigurationAttributes/uuid=5A541061-1B29-4B3A-A28B-748EDE7F40E1

@@ -1,0 +1,1 @@
+module.exports = [{"isApi":true,"priority":1101.0011,"key":"Window","style":{backgroundColor:"#f4f4f4",titleAttributes:{color:"#ffffff",},}}];

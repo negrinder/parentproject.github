@@ -6,65 +6,84 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    var __alloyId0 = [];
-    $.__views.__alloyId2 = Ti.UI.createWindow({
-        backgroundColor: "#fff",
-        title: "Tab 1",
-        id: "__alloyId2"
+    var __alloyId1 = [];
+    $.__views.master = Alloy.createController("master", {
+        id: "master"
     });
-    $.__views.__alloyId3 = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "#000",
-        font: {
-            fontSize: 20,
-            fontFamily: "Helvetica Neue"
-        },
-        textAlign: "center",
-        text: "I am Window 1",
+    $.__views.tabNews = Ti.UI.createTab({
+        window: $.__views.master.getViewEx({
+            recurse: true
+        }),
+        id: "tabNews",
+        title: "News",
+        icon: "news.png"
+    });
+    __alloyId1.push($.__views.tabNews);
+    $.__views.about = Alloy.createController("about", {
+        id: "about"
+    });
+    $.__views.__alloyId3 = Ti.UI.createTab({
+        window: $.__views.about.getViewEx({
+            recurse: true
+        }),
+        title: "Chi Siamo",
+        icon: "info.png",
         id: "__alloyId3"
     });
-    $.__views.__alloyId2.add($.__views.__alloyId3);
-    $.__views.__alloyId1 = Ti.UI.createTab({
-        window: $.__views.__alloyId2,
-        title: "Tab 1",
-        icon: "KS_nav_ui.png",
-        id: "__alloyId1"
-    });
-    __alloyId0.push($.__views.__alloyId1);
-    $.__views.__alloyId5 = Ti.UI.createWindow({
-        backgroundColor: "#fff",
-        title: "Tab 2",
-        id: "__alloyId5"
-    });
-    $.__views.__alloyId6 = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "#000",
-        font: {
-            fontSize: 20,
-            fontFamily: "Helvetica Neue"
+    __alloyId1.push($.__views.__alloyId3);
+    $.__views.__alloyId6 = Ti.UI.createWindow({
+        backgroundColor: "#f4f4f4",
+        titleAttributes: {
+            color: "#ffffff"
         },
-        textAlign: "center",
-        text: "I am Window 2",
+        title: "Contatti",
         id: "__alloyId6"
     });
-    $.__views.__alloyId5.add($.__views.__alloyId6);
-    $.__views.__alloyId4 = Ti.UI.createTab({
-        window: $.__views.__alloyId5,
-        title: "Tab 2",
-        icon: "KS_nav_views.png",
-        id: "__alloyId4"
+    $.__views.contattiView = Ti.UI.createWebView({
+        id: "contattiView",
+        url: "contatti.html"
     });
-    __alloyId0.push($.__views.__alloyId4);
+    $.__views.__alloyId6.add($.__views.contattiView);
+    $.__views.__alloyId5 = Ti.UI.createTab({
+        window: $.__views.__alloyId6,
+        title: "Contatti",
+        icon: "contatti.png",
+        id: "__alloyId5"
+    });
+    __alloyId1.push($.__views.__alloyId5);
+    $.__views.paypal = Alloy.createController("paypal", {
+        id: "paypal"
+    });
+    $.__views.__alloyId7 = Ti.UI.createTab({
+        window: $.__views.paypal.getViewEx({
+            recurse: true
+        }),
+        title: "Dona",
+        icon: "dona.png",
+        id: "__alloyId7"
+    });
+    __alloyId1.push($.__views.__alloyId7);
     $.__views.index = Ti.UI.createTabGroup({
-        tabs: __alloyId0,
+        tabs: __alloyId1,
+        barColor: "#d21100",
+        tabsBackgroundColor: "#444",
+        tabsTintColor: "#ffffff",
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    $.index.open();
+    $.master.on("detail", function(e) {
+        var controller = Alloy.createController("detail");
+        var win = controller.getView();
+        controller.setArticle(e.row.articleTitle, e.row.articleDescription, e.row.articleUrl);
+        win.open({
+            modal: true,
+            navBarHidden: true,
+            fullscreen: true
+        });
+    });
+    $.master.getView().open();
     _.extend($, exports);
 }
 
