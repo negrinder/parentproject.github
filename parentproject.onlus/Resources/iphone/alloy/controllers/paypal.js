@@ -19,7 +19,6 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
-    require("ti.paypal");
     var win = $.dona;
     var u = void 0 != Ti.Android ? "dp" : 0;
     var status = Ti.UI.createLabel({
@@ -48,7 +47,7 @@ function Controller() {
     });
     win.add(conferma);
     conferma.addEventListener("click", function() {
-        Alloy.createController("donate", {
+        "android" == Ti.Platform.osname || Alloy.createController("donate", {
             donazione: importo.value
         }).getView().open({
             modal: true,

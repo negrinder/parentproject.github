@@ -1,7 +1,5 @@
 var args = arguments[0] || {};
 
-var Paypal = require('ti.paypal');
-
 var win = $.dona;
 var u = Ti.Android != undefined ? 'dp' : 0;
 
@@ -25,17 +23,22 @@ win.add(importo);
 
 var conferma = Ti.UI.createButton({
   top: 150 + u,
-  width: 278, 
+  width: 278,
   height: 43,
   title: "Avanti"
 });
 win.add(conferma);
 
 conferma.addEventListener('click', function (e) {
-	var controller = Alloy.createController('donate', {
-						donazione: importo.value
-					}).getView().open({ modal : true,
-								        navBarHidden: true,
-								    	fullscreen: true
-								    	});
+	if (Ti.Platform.osname == "android") {
+	}
+	else
+	{
+		var controller = Alloy.createController('donate', {
+							donazione: importo.value
+						}).getView().open({ modal : true,
+									        navBarHidden: true,
+									    	fullscreen: true
+									    	});
+	}
 });
