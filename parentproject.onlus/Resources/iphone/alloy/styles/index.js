@@ -1,1 +1,1 @@
-module.exports = [{"isApi":true,"priority":1000.0009,"key":"Window","style":{backgroundColor:"#f4f4f4",titleAttributes:{color:"#ffffff",},statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,}},{"isApi":true,"priority":1000.001,"key":"Label","style":{textAlign:"center",}}];
+module.exports = [{"isApi":true,"priority":1000.0014,"key":"Label","style":{textAlign:"center",}},{"isApi":true,"priority":1101.0012000000002,"key":"Window","style":{backgroundColor:"#f4f4f4",titleAttributes:{color:"#ffffff",},statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,}}];
