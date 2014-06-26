@@ -16,7 +16,7 @@ function Controller() {
                         description: item.description
                     }).getView());
                 });
-                $.table.setData(rows);
+                $.notizie.setData(rows);
             }
         });
     }
@@ -29,33 +29,19 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.master = Ti.UI.createWindow({
-        backgroundColor: "#f8f8f8",
-        statusBarStyle: Titanium.UI.iPhone.StatusBar.BLACK_OPAQUE,
-        barColor: "#f8f8f8",
-        titleAttributes: {
-            color: "#2d2d2d",
-            font: {
-                fontFamily: "Heiti SC",
-                fontSize: 22
-            }
-        },
-        title: "Ultime Notizie",
         id: "master"
     });
     $.__views.master && $.addTopLevelView($.__views.master);
-    $.__views.refreshButton = Ti.UI.createButton({
-        color: "red",
-        id: "refreshButton",
-        image: "refresh.png"
+    $.__views.__alloyId1 = Ti.UI.createView({
+        id: "__alloyId1"
     });
-    refreshRss ? $.__views.refreshButton.addEventListener("click", refreshRss) : __defers["$.__views.refreshButton!click!refreshRss"] = true;
-    $.__views.master.rightNavButton = $.__views.refreshButton;
-    var __alloyId10 = [];
+    $.__views.master.add($.__views.__alloyId1);
+    var __alloyId2 = [];
     $.__views.view1 = Ti.UI.createView({
         id: "view1",
         backgroundColor: "#f4f4f4"
     });
-    __alloyId10.push($.__views.view1);
+    __alloyId2.push($.__views.view1);
     $.__views.image1 = Ti.UI.createImageView({
         image: "foto-Rick.jpg",
         id: "image1"
@@ -65,7 +51,7 @@ function Controller() {
         id: "view2",
         backgroundColor: "#f4f4f4"
     });
-    __alloyId10.push($.__views.view2);
+    __alloyId2.push($.__views.view2);
     $.__views.image2 = Ti.UI.createImageView({
         image: "foto-Rick2.jpg",
         id: "image2"
@@ -75,21 +61,17 @@ function Controller() {
         id: "view3",
         backgroundColor: "#f4f4f4"
     });
-    __alloyId10.push($.__views.view3);
+    __alloyId2.push($.__views.view3);
     $.__views.image3 = Ti.UI.createImageView({
         image: "foto-Rick3.jpg",
         id: "image3"
     });
     $.__views.view3.add($.__views.image3);
-    $.__views.scrollableView = Ti.UI.createScrollableView({
-        top: "5",
-        left: "5",
-        right: "5",
-        bottom: "59%",
+    $.__views.immagini = Ti.UI.createScrollableView({
+        top: 0,
+        height: 242,
         separatorStyle: 0,
-        borderColor: "#c0c0c0",
-        borderRadius: 3,
-        borderWidth: 1,
+        borderWidth: 0,
         backgroundColor: "transparent",
         showPagingControl: true,
         pagingControlHeight: 30,
@@ -97,29 +79,242 @@ function Controller() {
         currentPageIndicatorTintColor: "black",
         overlayEnabled: true,
         pagingControlColor: "transparent",
-        views: __alloyId10,
-        id: "scrollableView"
+        views: __alloyId2,
+        id: "immagini"
     });
-    $.__views.master.add($.__views.scrollableView);
-    $.__views.table = Ti.UI.createTableView({
-        top: "40%",
-        left: "5",
-        right: "5",
-        bottom: "5",
+    $.__views.__alloyId1.add($.__views.immagini);
+    $.__views.bordoTop = Ti.UI.createView({
+        top: 242,
+        height: 1,
+        backgroundColor: "#9e9e9e",
+        id: "bordoTop"
+    });
+    $.__views.__alloyId1.add($.__views.bordoTop);
+    $.__views.barra = Ti.UI.createView({
+        top: 243,
+        height: 50,
+        backgroundGradient: {
+            type: "linear",
+            startPoint: {
+                x: "0%",
+                y: "0%"
+            },
+            endPoint: {
+                x: "0%",
+                y: "100%"
+            },
+            colors: [ {
+                color: "#eeeeee",
+                offset: 0
+            }, {
+                color: "#d0d0d0",
+                offset: 1
+            } ]
+        },
+        id: "barra",
+        textAlign: "right"
+    });
+    $.__views.__alloyId1.add($.__views.barra);
+    $.__views.btn1 = Ti.UI.createButton({
+        top: -7,
+        right: 237,
+        tintColor: "#585858",
+        backgroundSelectedColor: "#ff0000",
+        id: "btn1",
+        image: "couple48.png",
+        width: "64",
+        height: "64"
+    });
+    $.__views.barra.add($.__views.btn1);
+    $.__views.btn2 = Ti.UI.createButton({
+        top: -7,
+        right: 163,
+        tintColor: "#585858",
+        id: "btn2",
+        image: "star51.png",
+        width: "64",
+        height: "64"
+    });
+    $.__views.barra.add($.__views.btn2);
+    $.__views.btn3 = Ti.UI.createButton({
+        top: -7,
+        right: 89,
+        tintColor: "#585858",
+        id: "btn3",
+        image: "arroba2.png",
+        width: "64",
+        height: "64"
+    });
+    $.__views.barra.add($.__views.btn3);
+    $.__views.btn4 = Ti.UI.createButton({
+        top: -7,
+        right: 15,
+        tintColor: "#585858",
+        id: "btn4",
+        image: "heart99.png",
+        width: "64",
+        height: "64"
+    });
+    $.__views.barra.add($.__views.btn4);
+    $.__views.bordoBottom = Ti.UI.createView({
+        top: 293,
+        height: 1,
+        backgroundColor: "#9e9e9e",
+        id: "bordoBottom"
+    });
+    $.__views.__alloyId1.add($.__views.bordoBottom);
+    $.__views.notizieContainer = Ti.UI.createView({
+        top: 294,
+        backgroundColor: "#fff",
+        id: "notizieContainer"
+    });
+    $.__views.__alloyId1.add($.__views.notizieContainer);
+    $.__views.rilascia = Ti.UI.createView({
+        backgroundColor: "#fcfcfc",
+        id: "rilascia"
+    });
+    $.__views.rilascia_testo = Ti.UI.createLabel({
+        bottom: 10,
+        font: {
+            fontSize: "12dp",
+            fontWeight: "bold"
+        },
+        color: "#868686",
+        text: "rilascia per aggiornare",
+        id: "rilascia_testo"
+    });
+    $.__views.rilascia.add($.__views.rilascia_testo);
+    $.__views.notizie = Ti.UI.createTableView({
         separatorStyle: 0,
-        borderColor: "#c0c0c0",
-        borderRadius: 3,
-        borderWidth: 1,
-        id: "table"
+        borderWidth: 0,
+        headerPullView: $.__views.rilascia,
+        id: "notizie"
     });
-    $.__views.master.add($.__views.table);
-    openDetail ? $.__views.table.addEventListener("click", openDetail) : __defers["$.__views.table!click!openDetail"] = true;
+    $.__views.notizieContainer.add($.__views.notizie);
+    openDetail ? $.__views.notizie.addEventListener("click", openDetail) : __defers["$.__views.notizie!click!openDetail"] = true;
+    $.__views.chisiamoContainer = Ti.UI.createView({
+        top: 294,
+        backgroundColor: "#fff",
+        id: "chisiamoContainer"
+    });
+    $.__views.__alloyId1.add($.__views.chisiamoContainer);
+    $.__views.about = Alloy.createController("about", {
+        id: "about",
+        __parentSymbol: $.__views.chisiamoContainer
+    });
+    $.__views.about.setParent($.__views.chisiamoContainer);
+    $.__views.contattiContainer = Ti.UI.createView({
+        top: 294,
+        backgroundColor: "#fff",
+        id: "contattiContainer"
+    });
+    $.__views.__alloyId1.add($.__views.contattiContainer);
+    $.__views.contatti = Ti.UI.createWebView({
+        id: "contatti",
+        url: "contatti.html"
+    });
+    $.__views.contattiContainer.add($.__views.contatti);
+    $.__views.donaContainer = Ti.UI.createView({
+        top: 294,
+        backgroundColor: "#fff",
+        id: "donaContainer"
+    });
+    $.__views.__alloyId1.add($.__views.donaContainer);
+    $.__views.rilascia_testo = Ti.UI.createLabel({
+        bottom: 10,
+        font: {
+            fontSize: "12dp",
+            fontWeight: "bold"
+        },
+        color: "#868686",
+        text: "dona",
+        id: "rilascia_testo"
+    });
+    $.__views.donaContainer.add($.__views.rilascia_testo);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var rss = require("rss");
     refreshRss();
-    __defers["$.__views.refreshButton!click!refreshRss"] && $.__views.refreshButton.addEventListener("click", refreshRss);
-    __defers["$.__views.table!click!openDetail"] && $.__views.table.addEventListener("click", openDetail);
+    $.notizie.addEventListener("dragEnd", function() {
+        refreshRss();
+    });
+    $.btn1.addEventListener("click", function() {
+        $.notizieContainer.animate({
+            opacity: 1,
+            duration: 500
+        });
+        $.chisiamoContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.contattiContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.donaContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+    });
+    $.btn2.addEventListener("click", function() {
+        $.notizieContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.chisiamoContainer.animate({
+            opacity: 1,
+            duration: 500
+        });
+        $.contattiContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.donaContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+    });
+    $.btn3.addEventListener("click", function() {
+        $.notizieContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.chisiamoContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.contattiContainer.animate({
+            opacity: 1,
+            duration: 500
+        });
+        $.donaContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+    });
+    $.btn4.addEventListener("click", function() {
+        $.notizieContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.chisiamoContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.contattiContainer.animate({
+            opacity: 0,
+            duration: 500
+        });
+        $.donaContainer.animate({
+            opacity: 1,
+            duration: 500
+        });
+    });
+    $.notizieContainer.opacity = 1;
+    $.chisiamoContainer.opacity = 0;
+    $.contattiContainer.opacity = 0;
+    $.donaContainer.opacity = 0;
+    __defers["$.__views.notizie!click!openDetail"] && $.__views.notizie.addEventListener("click", openDetail);
     _.extend($, exports);
 }
 

@@ -10,7 +10,7 @@ else
 	$.image.image = args.image;
 
 $.date.text = args.date;
-$.title.text = args.title.substr(0,1).toUpperCase() + args.title.substr(1).toLowerCase();
+$.title.text = args.title.substr(0,1).toUpperCase() + args.title.substr(1,25).toLowerCase() + '...';
 $.category.text = args.category;
 
 var sepLine = Ti.UI.createView({
@@ -23,24 +23,24 @@ var sepLine = Ti.UI.createView({
 $.row.add(sepLine);
     
 if($.category.text==='Area CAD') {
-	$.category.backgroundColor = '#ef5b2f';
-	$.date.color = '#ef5b2f';
+	$.colore.backgroundColor = '#ef5b2f';
+	$.category.color = '#ef5b2f';
 } else if($.category.text==='Eventi locali') {
-	$.category.backgroundColor = '#7d543e';
-	$.date.color = '#7d543e';
+	$.colore.backgroundColor = '#7d543e';
+	$.category.color = '#7d543e';
 } else if($.category.text==='Area Scienza') {
-	$.category.backgroundColor = '#1b7db1';
-	$.date.color = '#1b7db1';
+	$.colore.backgroundColor = '#1b7db1';
+	$.category.color = '#1b7db1';
 } else if($.category.text==='Comunicati Stampa') {
-	$.category.backgroundColor = '#940909';
-	$.date.color = '#940909';
+	$.colore.backgroundColor = '#940909';
+	$.category.color = '#940909';
 } else if($.category.text==='Area Istituzionale') {
-	$.category.backgroundColor = '#e60a2e';
-	$.date.color = '#e60a2e';
+	$.colore.backgroundColor = '#e60a2e';
+	$.category.color = '#e60a2e';
 } else if($.category.text==='Primo piano') {
-	$.category.backgroundColor = '#058b7b';
-	$.date.color = '#058b7b';
+	$.colore.backgroundColor = '#058b7b';
+	$.category.color = '#058b7b';
 } else {
-	$.category.backgroundColor = '#2d2d2d';
-	$.date.color = '#2d2d2d';
+	$.colore.backgroundColor = '#2d2d2d';
+	$.category.color = '#2d2d2d';
 }

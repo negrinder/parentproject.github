@@ -1,6 +1,9 @@
 <Alloy>
 	<TableViewRow>
-		<ImageView id="image"/>
+		<View id="colore" />
+		<View id="foto">
+			<ImageView id="image"/>
+		</View>
 		<Label id="category"/>		
 		<Label id="title"/>
 		<Label id="date"/>

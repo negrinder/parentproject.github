@@ -1,41 +1,9 @@
-"#master[platform=android]": {
-    exitOnClose: true
-}
-
-"Window[platform=ios]": {
-	backgroundColor: "#f8f8f8",
-
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.BLACK_OPAQUE,
-	barColor: '#f8f8f8',
-    
-    titleAttributes:  {
-        color:'#2d2d2d',
-        font: {
-        	fontFamily: 'Heiti SC', 
-        	fontSize: 22
-        },
-    }
-}
-"Window[platform=android]": {
-	backgroundColor: "#f8f8f8",
-	titleAttributes: {
-		color: "#ffffff"
-	},
-}
-
-"#refreshButton": {
-	color : 'red'
-}
-
-"ScrollableView": {
-	top: '5',
-	left: '5',
-	right: '5',
-	bottom: '59%',
+"#immagini": {
+	top: 0,
+	height: 242,
+	
 	separatorStyle: 0,
-	borderColor:'#c0c0c0',
-    borderRadius:3,
-    borderWidth:1,
+	borderWidth:0,
 
 	backgroundColor:'transparent',
 	showPagingControl:true,
@@ -46,15 +14,91 @@
 	pagingControlColor:'transparent'
 }
 
-"TableView": {
-	top: '40%',
-	left: '5',
-	right: '5',
-	bottom: '5',
+"#bordoTop": {
+	top: 242,
+	height: 1,
+	backgroundColor: '#9e9e9e'
+}
+
+"#barra": {
+	top: 243,
+	height: 50,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#eeeeee', offset: 0.0}, 
+        		  { color: '#d0d0d0', offset: 1.0 }]
+   }
+}
+
+"#bordoBottom": {
+	top: 293,
+	height: 1,
+	backgroundColor: '#9e9e9e'
+}
+
+"#rilascia": {
+	backgroundColor: '#fcfcfc'
+}
+
+"#rilascia_testo": {
+	bottom: 10,
+	font: {
+        fontSize: '12dp',
+        fontWeight: 'bold'
+    },
+	color: '#868686'
+}
+
+"#btn1":{
+	top: -7,
+	right: 237,
+	tintColor: '#585858',
+	backgroundSelectedColor: '#ff0000'
+}
+
+"#btn2":{
+	top: -7,
+	right: 163,
+	tintColor: '#585858'
+}
+
+"#btn3":{
+	top: -7,
+	right: 89,
+	tintColor: '#585858'
+}
+
+"#btn4":{
+	top: -7,
+	right: 15,
+	tintColor: '#585858'
+}
+
+"#notizieContainer": {
+	top: 294,
+	backgroundColor: '#fff'
+}
+
+"#chisiamoContainer": {
+	top: 294,
+	backgroundColor: '#fff'
+}
+
+"#contattiContainer": {
+	top: 294,
+	backgroundColor: '#fff'
+}
+
+"#donaContainer": {
+	top: 294,
+	backgroundColor: '#fff'
+}
+
+"#notizie": {
 	separatorStyle: 0,
-	borderColor:'#c0c0c0',
-    borderRadius:3,
-    borderWidth:1
+    borderWidth:0
 }
 
 "#image1": {

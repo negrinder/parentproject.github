@@ -14,8 +14,4 @@ $.master.on('detail', function(e) {
     	});
 });
 
-if (OS_ANDROID) {
-	$.master.getView().open();
-} else {
-	$.index.open();
-}
+$.master.getView().open();

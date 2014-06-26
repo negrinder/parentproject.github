@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="Chi Siamo">
+	<View>
 		<ScrollableView id="scrollableView" showPagingControl="true">
             <View id="view1" backgroundColor="#f4f4f4">
             	<WebView id="associazione" url="associazione.html" />
@@ -11,5 +11,5 @@
             	<WebView id="struttura" url="struttura.html" />
             </View>
         </ScrollableView>
-	</Window>
+	</View>
 </Alloy>

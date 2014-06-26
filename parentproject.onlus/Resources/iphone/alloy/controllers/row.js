@@ -9,68 +9,78 @@ function Controller() {
     $.__views.row = Ti.UI.createTableViewRow({
         backgroundColor: "#ffffff",
         selectedBackgroundColor: "#c0c0c0",
-        height: "96dp",
+        height: 72,
         className: "itemRow",
         hasChild: false,
         id: "row"
     });
     $.__views.row && $.addTopLevelView($.__views.row);
-    $.__views.image = Ti.UI.createImageView({
-        width: "66dp",
-        left: "5dp",
-        top: "24dp",
-        bottom: "6dp",
-        touchEnabled: false,
-        gallerytype: "gallery",
-        borderColor: "#c0c0c0",
-        borderRadius: 10,
+    $.__views.colore = Ti.UI.createView({
+        top: 3,
+        bottom: 3,
+        left: 3,
+        width: 7,
+        height: 64,
+        borderRadius: 3,
+        id: "colore"
+    });
+    $.__views.row.add($.__views.colore);
+    $.__views.foto = Ti.UI.createView({
+        top: 3,
+        bottom: 3,
+        left: 13,
+        width: 64,
+        height: 64,
+        borderColor: "#eee",
+        borderRadius: 3,
         borderWidth: 1,
-        hires: true,
+        id: "foto"
+    });
+    $.__views.row.add($.__views.foto);
+    $.__views.image = Ti.UI.createImageView({
+        width: 60,
         id: "image"
     });
-    $.__views.row.add($.__views.image);
+    $.__views.foto.add($.__views.image);
     $.__views.category = Ti.UI.createLabel({
-        height: "15dp",
-        left: "3dp",
-        right: "3dp",
-        top: "3dp",
+        top: 45,
+        left: 88,
+        right: 3,
+        height: 15,
         font: {
             fontSize: "12dp",
             fontWeight: "bold"
         },
-        color: "#ffffff",
+        color: "#000",
         borderRadius: 3,
-        textAlign: "center",
-        touchEnabled: false,
+        textAlign: "left",
         id: "category"
     });
     $.__views.row.add($.__views.category);
     $.__views.title = Ti.UI.createLabel({
-        height: "55dp",
-        left: "83dp",
-        right: "3dp",
-        top: "24dp",
+        top: 20,
+        left: 86,
+        height: 25,
+        right: 3,
         font: {
-            fontSize: "18dp",
+            fontSize: "16dp",
             fontWeight: "bold"
         },
         textAlign: "left",
         verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
-        touchEnabled: false,
         id: "title"
     });
     $.__views.row.add($.__views.title);
     $.__views.date = Ti.UI.createLabel({
-        height: "15dp",
-        left: "83dp",
-        right: "6dp",
-        top: "75dp",
+        top: 45,
+        left: 86,
+        right: 6,
+        height: 15,
         font: {
-            fontSize: "10dp"
+            fontSize: "12dp"
         },
-        color: "#2d2d2d",
+        color: "#868686",
         textAlign: "right",
-        touchEnabled: false,
         id: "date"
     });
     $.__views.row.add($.__views.date);
@@ -82,7 +92,7 @@ function Controller() {
     $.row.articleDescription = args.description;
     $.image.image = "" == args.image ? "blank.jpg" : args.image;
     $.date.text = args.date;
-    $.title.text = args.title.substr(0, 1).toUpperCase() + args.title.substr(1).toLowerCase();
+    $.title.text = args.title.substr(0, 1).toUpperCase() + args.title.substr(1, 25).toLowerCase() + "...";
     $.category.text = args.category;
     var sepLine = Ti.UI.createView({
         left: 0,
@@ -93,26 +103,26 @@ function Controller() {
     });
     $.row.add(sepLine);
     if ("Area CAD" === $.category.text) {
-        $.category.backgroundColor = "#ef5b2f";
-        $.date.color = "#ef5b2f";
+        $.colore.backgroundColor = "#ef5b2f";
+        $.category.color = "#ef5b2f";
     } else if ("Eventi locali" === $.category.text) {
-        $.category.backgroundColor = "#7d543e";
-        $.date.color = "#7d543e";
+        $.colore.backgroundColor = "#7d543e";
+        $.category.color = "#7d543e";
     } else if ("Area Scienza" === $.category.text) {
-        $.category.backgroundColor = "#1b7db1";
-        $.date.color = "#1b7db1";
+        $.colore.backgroundColor = "#1b7db1";
+        $.category.color = "#1b7db1";
     } else if ("Comunicati Stampa" === $.category.text) {
-        $.category.backgroundColor = "#940909";
-        $.date.color = "#940909";
+        $.colore.backgroundColor = "#940909";
+        $.category.color = "#940909";
     } else if ("Area Istituzionale" === $.category.text) {
-        $.category.backgroundColor = "#e60a2e";
-        $.date.color = "#e60a2e";
+        $.colore.backgroundColor = "#e60a2e";
+        $.category.color = "#e60a2e";
     } else if ("Primo piano" === $.category.text) {
-        $.category.backgroundColor = "#058b7b";
-        $.date.color = "#058b7b";
+        $.colore.backgroundColor = "#058b7b";
+        $.category.color = "#058b7b";
     } else {
-        $.category.backgroundColor = "#2d2d2d";
-        $.date.color = "#2d2d2d";
+        $.colore.backgroundColor = "#2d2d2d";
+        $.category.color = "#2d2d2d";
     }
     _.extend($, exports);
 }

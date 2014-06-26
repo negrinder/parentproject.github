@@ -1,1 +1,1 @@
-module.exports = [{"isApi":true,"priority":1000.0012,"key":"TabGroup","style":{tabsBackgroundColor:"#f8f8f8",tabsTintColor:"#ff0000",translucent:true,}},{"isId":true,"priority":100000.0013,"key":"tabNews","style":{icon:"dialogue.png",tintColor:"red",}}];
+module.exports = [];

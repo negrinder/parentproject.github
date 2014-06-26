@@ -1,32 +1,45 @@
 <Alloy>
-	<Window title="Ultime Notizie">
-		<!-- android menu -->
-		<Menu platform="android">
-			<MenuItem title="Refresh" icon="refresh.png" onClick="refreshRss"/>
-		</Menu>
-
-		<!-- rightNavButton for platforms that support them -->
-		<RightNavButton platform="ios">
-			<Button id="refreshButton" image="refresh.png" onClick="refreshRss"/>
-		</RightNavButton>
-		
-		<ScrollableView id="scrollableView">
-            <View id="view1" backgroundColor="#f4f4f4">
-            	<ImageView id="image1"/>
-            </View>
-            <View id="view2" backgroundColor="#f4f4f4">
-            	<ImageView id="image2"/>
-            </View>
-            <View id="view3" backgroundColor="#f4f4f4">
-            	<ImageView id="image3"/>
-            </View>
-        </ScrollableView>		
-
-		<!-- tableview representing all master rows -->
-		<TableView id="table" onClick="openDetail">
-			<HeaderView platform="android">
-				<Label id="header">Ultime Notizie</Label>
-			</HeaderView>
-		</TableView>
+	<Window>
+		<View>
+			<ScrollableView id="immagini">
+	            <View id="view1" backgroundColor="#f4f4f4">
+	            	<ImageView id="image1"/>
+	            </View>
+	            <View id="view2" backgroundColor="#f4f4f4">
+	            	<ImageView id="image2"/>
+	            </View>
+	            <View id="view3" backgroundColor="#f4f4f4">
+	            	<ImageView id="image3"/>
+	            </View>
+	        </ScrollableView>
+	        <View id="bordoTop">
+	        </View>
+	        <View id="barra" textAlign="right">
+	        	<Button id="btn1" image="couple48.png" width="64" height="64"></Button>
+	        	<Button id="btn2" image="star51.png" width="64" height="64"></Button>
+	        	<Button id="btn3" image="arroba2.png" width="64" height="64"></Button>
+	        	<Button id="btn4" image="heart99.png" width="64" height="64"></Button>
+	        </View>
+	        <View id="bordoBottom">
+	        </View>
+	        <View id="notizieContainer">
+    	    	<TableView id="notizie" onClick="openDetail">
+		        	<HeaderPullView platform="ios">
+			            <View id="rilascia">
+			                <Label id="rilascia_testo">rilascia per aggiornare</Label>
+			            </View>
+			        </HeaderPullView>
+				</TableView>							        
+			</View>
+			<View id="chisiamoContainer">
+				<Require id="about" src="about"/>
+			</View>
+			<View id="contattiContainer">
+				<WebView id="contatti" url="contatti.html" />
+			</View>
+			<View id="donaContainer">
+				<Label id="rilascia_testo">dona</Label>
+			</View>
+		</View>
 	</Window>
 </Alloy>
