@@ -1,16 +1,10 @@
-"Window[platform=ios]": {
-	backgroundColor: "#f4f4f4",
-	titleAttributes: {
-		color: "#ffffff"
-	},
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
-}
-"Window[platform=android]": {
-	backgroundColor: "#f4f4f4",
-	titleAttributes: {
-		color: "#ffffff"
-	},
-}
-"Label": {
-	textAlign: 'center'
+"TabGroup": {
+	 tabsBackgroundColor: "#f8f8f8",
+	 tabsTintColor: "#ff0000",
+	 translucent: true
+} 
+
+"#tabNews": {
+	icon: 'dialogue.png',
+    tintColor: 'red'
 }

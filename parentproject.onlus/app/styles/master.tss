@@ -3,15 +3,68 @@
 }
 
 "Window[platform=ios]": {
-	backgroundColor: "#f4f4f4",
-	titleAttributes: {
-		color: "#ffffff"
-	},
-	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
+	backgroundColor: "#f8f8f8",
+
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.BLACK_OPAQUE,
+	barColor: '#f8f8f8',
+    
+    titleAttributes:  {
+        color:'#2d2d2d',
+        font: {
+        	fontFamily: 'Heiti SC', 
+        	fontSize: 22
+        },
+    }
 }
 "Window[platform=android]": {
-	backgroundColor: "#f4f4f4",
+	backgroundColor: "#f8f8f8",
 	titleAttributes: {
 		color: "#ffffff"
 	},
+}
+
+"#refreshButton": {
+	color : 'red'
+}
+
+"ScrollableView": {
+	top: '5',
+	left: '5',
+	right: '5',
+	bottom: '59%',
+	separatorStyle: 0,
+	borderColor:'#c0c0c0',
+    borderRadius:3,
+    borderWidth:1,
+
+	backgroundColor:'transparent',
+	showPagingControl:true,
+	pagingControlHeight:30,
+	pageIndicatorTintColor:'gray',
+	currentPageIndicatorTintColor:'black',
+	overlayEnabled:true,
+	pagingControlColor:'transparent'
+}
+
+"TableView": {
+	top: '40%',
+	left: '5',
+	right: '5',
+	bottom: '5',
+	separatorStyle: 0,
+	borderColor:'#c0c0c0',
+    borderRadius:3,
+    borderWidth:1
+}
+
+"#image1": {
+	image:'foto-Rick.jpg'
+}
+
+"#image2": {
+	image:'foto-Rick2.jpg'
+}
+
+"#image3": {
+	image:'foto-Rick3.jpg'
 }

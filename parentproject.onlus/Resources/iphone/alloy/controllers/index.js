@@ -11,12 +11,13 @@ function Controller() {
         id: "master"
     });
     $.__views.tabNews = Ti.UI.createTab({
+        icon: "dialogue.png",
+        tintColor: "red",
         window: $.__views.master.getViewEx({
             recurse: true
         }),
         id: "tabNews",
-        title: "News",
-        icon: "news.png"
+        title: "News"
     });
     __alloyId1.push($.__views.tabNews);
     $.__views.about = Alloy.createController("about", {
@@ -32,11 +33,6 @@ function Controller() {
     });
     __alloyId1.push($.__views.__alloyId3);
     $.__views.__alloyId6 = Ti.UI.createWindow({
-        backgroundColor: "#f4f4f4",
-        titleAttributes: {
-            color: "#ffffff"
-        },
-        statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
         title: "Contatti",
         id: "__alloyId6"
     });
@@ -65,10 +61,10 @@ function Controller() {
     });
     __alloyId1.push($.__views.__alloyId7);
     $.__views.index = Ti.UI.createTabGroup({
+        tabsBackgroundColor: "#f8f8f8",
+        tabsTintColor: "#ff0000",
+        translucent: true,
         tabs: __alloyId1,
-        barColor: "#d21100",
-        tabsBackgroundColor: "#444",
-        tabsTintColor: "#ffffff",
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);

@@ -7,74 +7,113 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.row = Ti.UI.createTableViewRow({
-        backgroundColor: "#f4f4f4",
-        selectedBackgroundColor: "#ccc",
-        height: "70dp",
+        backgroundColor: "#ffffff",
+        selectedBackgroundColor: "#c0c0c0",
+        height: "96dp",
         className: "itemRow",
-        hasChild: true,
+        hasChild: false,
         id: "row"
     });
     $.__views.row && $.addTopLevelView($.__views.row);
     $.__views.image = Ti.UI.createImageView({
-        height: "42dp",
-        width: "68dp",
+        width: "66dp",
         left: "5dp",
-        top: "3dp",
+        top: "24dp",
+        bottom: "6dp",
         touchEnabled: false,
+        gallerytype: "gallery",
+        borderColor: "#c0c0c0",
+        borderRadius: 10,
+        borderWidth: 1,
+        hires: true,
         id: "image"
     });
     $.__views.row.add($.__views.image);
-    $.__views.date = Ti.UI.createLabel({
-        height: Ti.UI.SIZE,
-        width: "68dp",
-        left: "5dp",
-        bottom: "3dp",
-        color: "#444",
-        font: {
-            fontSize: "12dp"
-        },
-        textAlign: "center",
-        touchEnabled: false,
-        id: "date"
-    });
-    $.__views.row.add($.__views.date);
-    $.__views.title = Ti.UI.createLabel({
-        height: "42dp",
+    $.__views.category = Ti.UI.createLabel({
+        height: "15dp",
+        left: "3dp",
+        right: "3dp",
         top: "3dp",
         font: {
-            fontSize: "14dp"
-        },
-        left: "83dp",
-        right: "3dp",
-        touchEnabled: false,
-        id: "title"
-    });
-    $.__views.row.add($.__views.title);
-    $.__views.category = Ti.UI.createLabel({
-        height: Ti.UI.SIZE,
-        left: "83dp",
-        bottom: "3dp",
-        font: {
-            fontSize: "12dp"
+            fontSize: "12dp",
+            fontWeight: "bold"
         },
         color: "#ffffff",
-        right: "10dp",
+        borderRadius: 3,
         textAlign: "center",
         touchEnabled: false,
         id: "category"
     });
     $.__views.row.add($.__views.category);
+    $.__views.title = Ti.UI.createLabel({
+        height: "55dp",
+        left: "83dp",
+        right: "3dp",
+        top: "24dp",
+        font: {
+            fontSize: "18dp",
+            fontWeight: "bold"
+        },
+        textAlign: "left",
+        verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+        touchEnabled: false,
+        id: "title"
+    });
+    $.__views.row.add($.__views.title);
+    $.__views.date = Ti.UI.createLabel({
+        height: "15dp",
+        left: "83dp",
+        right: "6dp",
+        top: "75dp",
+        font: {
+            fontSize: "10dp"
+        },
+        color: "#2d2d2d",
+        textAlign: "right",
+        touchEnabled: false,
+        id: "date"
+    });
+    $.__views.row.add($.__views.date);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};
     $.row.articleUrl = args.articleUrl;
     $.row.articleTitle = args.title;
     $.row.articleDescription = args.description;
-    $.image.image = args.image;
+    $.image.image = "" == args.image ? "blank.jpg" : args.image;
     $.date.text = args.date;
-    $.title.text = args.title;
+    $.title.text = args.title.substr(0, 1).toUpperCase() + args.title.substr(1).toLowerCase();
     $.category.text = args.category;
-    $.category.backgroundColor = "Area CAD" === $.category.text ? "#ef5b2f" : "Eventi locali" === $.category.text ? "#7d543e" : "Area Scienza" === $.category.text ? "#1b7db1" : "Comunicati Stampa" === $.category.text ? "#940909" : "Area Istituzionale" === $.category.text ? "#e60a2e" : "Primo piano" === $.category.text ? "#058b7b" : "#2d2d2d";
+    var sepLine = Ti.UI.createView({
+        left: 0,
+        right: 0,
+        height: 2,
+        bottom: 0,
+        backgroundColor: "#f1f1f1"
+    });
+    $.row.add(sepLine);
+    if ("Area CAD" === $.category.text) {
+        $.category.backgroundColor = "#ef5b2f";
+        $.date.color = "#ef5b2f";
+    } else if ("Eventi locali" === $.category.text) {
+        $.category.backgroundColor = "#7d543e";
+        $.date.color = "#7d543e";
+    } else if ("Area Scienza" === $.category.text) {
+        $.category.backgroundColor = "#1b7db1";
+        $.date.color = "#1b7db1";
+    } else if ("Comunicati Stampa" === $.category.text) {
+        $.category.backgroundColor = "#940909";
+        $.date.color = "#940909";
+    } else if ("Area Istituzionale" === $.category.text) {
+        $.category.backgroundColor = "#e60a2e";
+        $.date.color = "#e60a2e";
+    } else if ("Primo piano" === $.category.text) {
+        $.category.backgroundColor = "#058b7b";
+        $.date.color = "#058b7b";
+    } else {
+        $.category.backgroundColor = "#2d2d2d";
+        $.date.color = "#2d2d2d";
+    }
     _.extend($, exports);
 }
 

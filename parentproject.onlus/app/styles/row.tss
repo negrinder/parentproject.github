@@ -1,52 +1,63 @@
 "#row": {
-	backgroundColor: "#f4f4f4",
-	selectedBackgroundColor : "#ccc",
-	height: '70dp',
-    className: 'itemRow',
-    hasChild: true
+	backgroundColor: '#ffffff',
+	selectedBackgroundColor : '#c0c0c0',
+	height: '96dp',
+	className: 'itemRow',
+    hasChild: false
 } 
 
 "#image": {
-    height: '42dp',
-    width: '68dp',
+    width: '66dp',
     left: '5dp',
+    top: '24dp',
+    bottom: '6dp',
+    touchEnabled: false,
+    
+    gallerytype: 'gallery',
+    borderColor: '#c0c0c0',
+    borderRadius: 10,
+    borderWidth: 1,
+    hires: true
+}
+
+"#category": {
+    height: '15dp',
+    left: '3dp',
+    right: '3dp',
     top: '3dp',
+	font: {
+        fontSize: '12dp',
+        fontWeight: 'bold'
+    },
+	color: '#ffffff',
+	borderRadius: 3,
+    textAlign : 'center',	
     touchEnabled: false
 }
 
 "#title": {
-    height: '42dp',
-    top: '3dp',
-    font: {
-        fontSize: '14dp'
-    },
+    height: '55dp',
     left: '83dp',
     right: '3dp',
-    touchEnabled: false
+    top: '24dp',
+    font: {
+        fontSize: '18dp',
+        fontWeight:'bold'
+    },
+	textAlign: 'left',
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	touchEnabled: false
 }
 
 "#date": {
-    height: Ti.UI.SIZE,
-    width: '68dp',
-    left: '5dp',
-    bottom: '3dp',
-    color: '#444',
-    font: {
-        fontSize: '12dp'
-    },
-    textAlign: 'center',
-    touchEnabled: false
-}
-
-"#category": {
-    height: Ti.UI.SIZE,
+	height: '15dp',
     left: '83dp',
-    bottom: '3dp',
-    font: {
-        fontSize: '12dp'
+    right: '6dp',
+    top: '75dp',
+	font: {
+        fontSize: '10dp'
     },
-	color: '#ffffff',
-	right: "10dp",
-	textAlign : "center",	
+	color: '#2d2d2d',
+	textAlign : 'right',	
     touchEnabled: false
 }

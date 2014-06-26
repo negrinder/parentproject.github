@@ -1,1 +1,1 @@
-module.exports = [{"isApi":true,"priority":1000.0014,"key":"Label","style":{textAlign:"center",}},{"isApi":true,"priority":1101.0012000000002,"key":"Window","style":{backgroundColor:"#f4f4f4",titleAttributes:{color:"#ffffff",},statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,}}];
+module.exports = [{"isApi":true,"priority":1000.0012,"key":"TabGroup","style":{tabsBackgroundColor:"#f8f8f8",tabsTintColor:"#ff0000",translucent:true,}},{"isId":true,"priority":100000.0013,"key":"tabNews","style":{icon:"dialogue.png",tintColor:"red",}}];
