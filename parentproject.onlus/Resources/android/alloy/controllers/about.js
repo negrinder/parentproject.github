@@ -6,12 +6,7 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.about = Ti.UI.createWindow({
-        backgroundColor: "#f4f4f4",
-        titleAttributes: {
-            color: "#ffffff"
-        },
-        title: "Chi Siamo",
+    $.__views.about = Ti.UI.createView({
         id: "about"
     });
     $.__views.about && $.addTopLevelView($.__views.about);

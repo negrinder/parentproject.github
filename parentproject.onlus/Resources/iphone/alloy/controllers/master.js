@@ -131,7 +131,7 @@ function Controller() {
         right: 163,
         tintColor: "#585858",
         id: "btn2",
-        image: "star51.png",
+        image: "chisiamo.png",
         width: "64",
         height: "64"
     });

@@ -16,7 +16,7 @@
 	        </View>
 	        <View id="barra" textAlign="right">
 	        	<Button id="btn1" image="couple48.png" width="64" height="64"></Button>
-	        	<Button id="btn2" image="star51.png" width="64" height="64"></Button>
+	        	<Button id="btn2" image="chisiamo.png" width="64" height="64"></Button>
 	        	<Button id="btn3" image="arroba2.png" width="64" height="64"></Button>
 	        	<Button id="btn4" image="heart99.png" width="64" height="64"></Button>
 	        </View>
