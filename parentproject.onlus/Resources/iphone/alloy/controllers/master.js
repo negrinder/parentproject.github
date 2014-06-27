@@ -32,16 +32,16 @@ function Controller() {
         id: "master"
     });
     $.__views.master && $.addTopLevelView($.__views.master);
-    $.__views.__alloyId1 = Ti.UI.createView({
-        id: "__alloyId1"
+    $.__views.__alloyId2 = Ti.UI.createView({
+        id: "__alloyId2"
     });
-    $.__views.master.add($.__views.__alloyId1);
-    var __alloyId2 = [];
+    $.__views.master.add($.__views.__alloyId2);
+    var __alloyId3 = [];
     $.__views.view1 = Ti.UI.createView({
         id: "view1",
         backgroundColor: "#f4f4f4"
     });
-    __alloyId2.push($.__views.view1);
+    __alloyId3.push($.__views.view1);
     $.__views.image1 = Ti.UI.createImageView({
         image: "foto-Rick.jpg",
         id: "image1"
@@ -51,7 +51,7 @@ function Controller() {
         id: "view2",
         backgroundColor: "#f4f4f4"
     });
-    __alloyId2.push($.__views.view2);
+    __alloyId3.push($.__views.view2);
     $.__views.image2 = Ti.UI.createImageView({
         image: "foto-Rick2.jpg",
         id: "image2"
@@ -61,7 +61,7 @@ function Controller() {
         id: "view3",
         backgroundColor: "#f4f4f4"
     });
-    __alloyId2.push($.__views.view3);
+    __alloyId3.push($.__views.view3);
     $.__views.image3 = Ti.UI.createImageView({
         image: "foto-Rick3.jpg",
         id: "image3"
@@ -79,17 +79,17 @@ function Controller() {
         currentPageIndicatorTintColor: "black",
         overlayEnabled: true,
         pagingControlColor: "transparent",
-        views: __alloyId2,
+        views: __alloyId3,
         id: "immagini"
     });
-    $.__views.__alloyId1.add($.__views.immagini);
+    $.__views.__alloyId2.add($.__views.immagini);
     $.__views.bordoTop = Ti.UI.createView({
         top: 242,
         height: 1,
         backgroundColor: "#9e9e9e",
         id: "bordoTop"
     });
-    $.__views.__alloyId1.add($.__views.bordoTop);
+    $.__views.__alloyId2.add($.__views.bordoTop);
     $.__views.barra = Ti.UI.createView({
         top: 243,
         height: 50,
@@ -114,7 +114,7 @@ function Controller() {
         id: "barra",
         textAlign: "right"
     });
-    $.__views.__alloyId1.add($.__views.barra);
+    $.__views.__alloyId2.add($.__views.barra);
     $.__views.btn1 = Ti.UI.createButton({
         top: -7,
         right: 237,
@@ -162,13 +162,13 @@ function Controller() {
         backgroundColor: "#9e9e9e",
         id: "bordoBottom"
     });
-    $.__views.__alloyId1.add($.__views.bordoBottom);
+    $.__views.__alloyId2.add($.__views.bordoBottom);
     $.__views.notizieContainer = Ti.UI.createView({
         top: 294,
         backgroundColor: "#fff",
         id: "notizieContainer"
     });
-    $.__views.__alloyId1.add($.__views.notizieContainer);
+    $.__views.__alloyId2.add($.__views.notizieContainer);
     $.__views.rilascia = Ti.UI.createView({
         backgroundColor: "#fcfcfc",
         id: "rilascia"
@@ -197,7 +197,7 @@ function Controller() {
         backgroundColor: "#fff",
         id: "chisiamoContainer"
     });
-    $.__views.__alloyId1.add($.__views.chisiamoContainer);
+    $.__views.__alloyId2.add($.__views.chisiamoContainer);
     $.__views.about = Alloy.createController("about", {
         id: "about",
         __parentSymbol: $.__views.chisiamoContainer
@@ -208,7 +208,7 @@ function Controller() {
         backgroundColor: "#fff",
         id: "contattiContainer"
     });
-    $.__views.__alloyId1.add($.__views.contattiContainer);
+    $.__views.__alloyId2.add($.__views.contattiContainer);
     $.__views.contatti = Ti.UI.createWebView({
         id: "contatti",
         url: "contatti.html"
@@ -219,18 +219,12 @@ function Controller() {
         backgroundColor: "#fff",
         id: "donaContainer"
     });
-    $.__views.__alloyId1.add($.__views.donaContainer);
-    $.__views.rilascia_testo = Ti.UI.createLabel({
-        bottom: 10,
-        font: {
-            fontSize: "12dp",
-            fontWeight: "bold"
-        },
-        color: "#868686",
-        text: "dona",
-        id: "rilascia_testo"
+    $.__views.__alloyId2.add($.__views.donaContainer);
+    $.__views.paypal = Alloy.createController("paypal", {
+        id: "paypal",
+        __parentSymbol: $.__views.donaContainer
     });
-    $.__views.donaContainer.add($.__views.rilascia_testo);
+    $.__views.paypal.setParent($.__views.donaContainer);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var rss = require("rss");

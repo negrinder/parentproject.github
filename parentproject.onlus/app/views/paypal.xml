@@ -1,4 +1,4 @@
 <Alloy>	
-	<Window id="dona" title="Dona Ora!">
-	</Window>
+	<View id="dona">
+	</View>
 </Alloy>

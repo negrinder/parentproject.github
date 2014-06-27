@@ -1,8 +1,11 @@
 <Alloy>
-	<Window layout="vertical">
-		<Button id="backButton" title='Torna alle notizie'/>
-		<Label id="titolo"/>
-		<WebView id="contenuto"/>
-		<Button id="goButton" title='Leggi tutta la notizia'/>
+	<Window>
+		<View>
+			<Button id="backButton" image="arrow110.png" width="64" height="64" />
+			<View id="colore"/>
+			<Label id="titolo"/>
+			<WebView id="contenuto"/>
+			<Button id="goButton" title='Leggi tutta la notizia'/>
+		</View>
 	</Window>
 </Alloy>

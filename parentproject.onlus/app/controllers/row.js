@@ -3,6 +3,7 @@ var args = arguments[0] || {};
 $.row.articleUrl = args.articleUrl;
 $.row.articleTitle = args.title;
 $.row.articleDescription = args.description;
+$.row.articleCategory = args.category;
 
 if(args.image == '')
 	$.image.image = 'blank.jpg';

@@ -1,4 +1,7 @@
 <Alloy>
-	<Window layout="vertical">		
+	<Window>
+		<View id="paypalView">
+			
+		</View>		
 	</Window>
 </Alloy>

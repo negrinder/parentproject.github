@@ -90,6 +90,7 @@ function Controller() {
     $.row.articleUrl = args.articleUrl;
     $.row.articleTitle = args.title;
     $.row.articleDescription = args.description;
+    $.row.articleCategory = args.category;
     $.image.image = "" == args.image ? "blank.jpg" : args.image;
     $.date.text = args.date;
     $.title.text = args.title.substr(0, 1).toUpperCase() + args.title.substr(1, 25).toLowerCase() + "...";

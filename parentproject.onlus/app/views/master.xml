@@ -38,7 +38,7 @@
 				<WebView id="contatti" url="contatti.html" />
 			</View>
 			<View id="donaContainer">
-				<Label id="rilascia_testo">dona</Label>
+				<Require id="paypal" src="paypal"/>
 			</View>
 		</View>
 	</Window>

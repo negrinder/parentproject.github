@@ -7,24 +7,37 @@ function Controller() {
     var $ = this;
     var exports = {};
     $.__views.detail = Ti.UI.createWindow({
-        backgroundColor: "#f4f4f4",
-        titleAttributes: {
-            color: "#ffffff"
-        },
-        statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
-        layout: "vertical",
+        backgroundColor: "#ffffff",
         id: "detail"
     });
     $.__views.detail && $.addTopLevelView($.__views.detail);
+    $.__views.__alloyId1 = Ti.UI.createView({
+        id: "__alloyId1"
+    });
+    $.__views.detail.add($.__views.__alloyId1);
     $.__views.backButton = Ti.UI.createButton({
         top: 10,
-        tintColor: "#e60a2e",
+        tintColor: "#585858",
+        backgroundSelectedColor: "#ff0000",
         id: "backButton",
-        title: "Torna alle notizie"
+        image: "arrow110.png",
+        width: "64",
+        height: "64"
     });
-    $.__views.detail.add($.__views.backButton);
+    $.__views.__alloyId1.add($.__views.backButton);
+    $.__views.colore = Ti.UI.createView({
+        top: 80,
+        bottom: 3,
+        left: 3,
+        width: 7,
+        borderRadius: 3,
+        id: "colore"
+    });
+    $.__views.__alloyId1.add($.__views.colore);
     $.__views.titolo = Ti.UI.createLabel({
-        top: 10,
+        top: 90,
+        left: 15,
+        right: 15,
         font: {
             fontSize: "16dp",
             fontWeight: "bold"
@@ -32,33 +45,53 @@ function Controller() {
         textAlign: "center",
         id: "titolo"
     });
-    $.__views.detail.add($.__views.titolo);
+    $.__views.__alloyId1.add($.__views.titolo);
     $.__views.contenuto = Ti.UI.createWebView({
-        top: 20,
-        left: 10,
-        right: 10,
-        fullscreen: false,
-        height: "70%",
+        top: 130,
+        left: 15,
+        right: 15,
         id: "contenuto"
     });
-    $.__views.detail.add($.__views.contenuto);
+    $.__views.__alloyId1.add($.__views.contenuto);
     $.__views.goButton = Ti.UI.createButton({
-        top: 10,
+        bottom: 20,
         tintColor: "#1b7db1",
         id: "goButton",
         title: "Leggi tutta la notizia"
     });
-    $.__views.detail.add($.__views.goButton);
+    $.__views.__alloyId1.add($.__views.goButton);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    exports.setArticle = function(titleText, descriptionText, articleUrl) {
-        $.titolo.text = titleText;
-        $.contenuto.html = "<style type='text/css''>p { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; }</style>" + descriptionText.split("The post")[0];
+    exports.setArticle = function(riga) {
+        $.titolo.text = riga.articleTitle;
+        $.contenuto.html = "<style type='text/css''>p { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; text-align: justify; }</style>" + riga.articleDescription.split("The post")[0];
+        if ("Area CAD" === riga.articleCategory) {
+            $.colore.backgroundColor = "#ef5b2f";
+            $.goButton.tintColor = "#ef5b2f";
+        } else if ("Eventi locali" === riga.articleCategory) {
+            $.colore.backgroundColor = "#7d543e";
+            $.goButton.tintColor = "#7d543e";
+        } else if ("Area Scienza" === riga.articleCategory) {
+            $.colore.backgroundColor = "#1b7db1";
+            $.goButton.tintColor = "#1b7db1";
+        } else if ("Comunicati Stampa" === riga.articleCategory) {
+            $.colore.backgroundColor = "#940909";
+            $.goButton.tintColor = "#940909";
+        } else if ("Area Istituzionale" === riga.articleCategory) {
+            $.colore.backgroundColor = "#e60a2e";
+            $.goButton.tintColor = "#e60a2e";
+        } else if ("Primo piano" === riga.articleCategory) {
+            $.colore.backgroundColor = "#058b7b";
+            $.goButton.tintColor = "#058b7b";
+        } else {
+            $.colore.backgroundColor = "#2d2d2d";
+            $.goButton.tintColor = "#2d2d2d";
+        }
         $.backButton.addEventListener("click", function() {
             $.detail.close();
         });
         $.goButton.addEventListener("click", function() {
-            Ti.Platform.openURL(articleUrl);
+            Ti.Platform.openURL(riga.articleUrl);
         });
     };
     _.extend($, exports);

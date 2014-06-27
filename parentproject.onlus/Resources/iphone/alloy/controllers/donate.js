@@ -8,11 +8,11 @@ function Controller() {
             width: 278 + u,
             height: 43 + u,
             buttonStyle: Paypal.BUTTON_278x43,
-            top: 200 + u,
+            bottom: 30 + u,
             language: "en_US",
             textStyle: Paypal.PAYPAL_TEXT_DONATE,
-            appID: "<<<YOUR APP ID HERE>>>",
-            paypalEnvironment: Paypal.PAYPAL_ENV_NONE,
+            appID: "APP-12345678912345",
+            paypalEnvironment: Paypal.PAYPAL_ENV_LIVE,
             feePaidByReceiver: false,
             enableShipping: false,
             payment: {
@@ -35,23 +35,16 @@ function Controller() {
             }
         });
         button.addEventListener("paymentCancelled", function() {
-            status.text = "Donazione cancellata.";
             addButtonToWindow();
         });
-        button.addEventListener("paymentSuccess", function(e) {
-            status.text = "Donazione avvenuta con successo.  TransactionID: " + e.transactionID + ", Caricamento...";
+        button.addEventListener("paymentSuccess", function() {
             addButtonToWindow();
         });
-        button.addEventListener("paymentError", function(e) {
-            status.text = "Errore di pagamento,  errorCode: " + e.errorCode + ", errorMessage: " + e.errorMessage;
+        button.addEventListener("paymentError", function() {
             addButtonToWindow();
         });
-        button.addEventListener("buttonDisplayed", function() {
-            status.text = "Sostieni Parent Project adesso!";
-        });
-        button.addEventListener("buttonError", function() {
-            status.text = "Sostieni Parent Project adesso!";
-        });
+        button.addEventListener("buttonDisplayed", function() {});
+        button.addEventListener("buttonError", function() {});
         button.addEventListener("click", function() {
             myPayment.subtotal = importo.value;
         });
@@ -70,33 +63,31 @@ function Controller() {
             color: "#ffffff"
         },
         statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
-        layout: "vertical",
         id: "donate"
     });
     $.__views.donate && $.addTopLevelView($.__views.donate);
+    $.__views.paypalView = Ti.UI.createView({
+        id: "paypalView"
+    });
+    $.__views.donate.add($.__views.paypalView);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};
     var Paypal = require("ti.paypal");
-    var win = $.donate;
+    var win = $.paypalView;
     var u = void 0 != Ti.Android ? "dp" : 0;
     var indietro = Ti.UI.createButton({
-        top: 50 + u,
-        width: 278,
-        height: 43,
-        title: "Annulla"
+        top: 10 + u,
+        image: "arrow110.png",
+        width: 64,
+        height: 64,
+        tintColor: "#585858",
+        backgroundSelectedColor: "#ff0000"
     });
     win.add(indietro);
     indietro.addEventListener("click", function() {
         $.donate.close();
     });
-    var status = Ti.UI.createLabel({
-        top: 150 + u,
-        height: 45 + u,
-        color: "#333",
-        text: "Loading, please wait..."
-    });
-    win.add(status);
     var button;
     addButtonToWindow();
     _.extend($, exports);

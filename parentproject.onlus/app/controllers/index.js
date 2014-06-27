@@ -4,7 +4,7 @@ $.master.on('detail', function(e) {
 	var win = controller.getView();
 
 	// get boxer stats by name
-	controller.setArticle(e.row.articleTitle, e.row.articleDescription, e.row.articleUrl);
+	controller.setArticle(e.row);
 
 	// open the detail windows
 	win.open({

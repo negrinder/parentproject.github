@@ -15,7 +15,7 @@ function Controller() {
     $.master.on("detail", function(e) {
         var controller = true && Alloy.isTablet ? $.detail : Alloy.createController("detail");
         var win = controller.getView();
-        controller.setArticle(e.row.articleTitle, e.row.articleDescription, e.row.articleUrl);
+        controller.setArticle(e.row);
         win.open({
             modal: true,
             navBarHidden: true,
