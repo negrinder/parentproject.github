@@ -1,0 +1,6 @@
+var args = arguments[0] || {};
+$.paypalView.html = "<html><head><title>Parent Project Onlus - Insieme X fermare la Duchenne!</title><style type='text/css'>body { margin-top:0; margin-right:0; margin-left:0; background-image: url('bgdona.png'); background-repeat: no-repeat; background-position:50% 50%; width:100%; } </style></head><body><center><form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'><div style='margin-top:100px;'></div><input type='image' src='https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif' border='0' name='submit' alt='PayPal - Il metodo rapido, affidabile e innovativo per pagare e farsi pagare.'><img alt='' border='0' src='https://www.paypalobjects.com/it_IT/i/scr/pixel.gif' width='1' height='1'><input type='hidden' name='cmd' value='_xclick'><br /><input type='hidden' name='business' value='presidenza@parentproject.org'><br /><input type='hidden' name='item_name' value='Parent Project Onlus - Insieme X fermare la Duchenne!'><br /><input type='hidden' name='currency_code' value='EUR'><input type='hidden' name='amount' value='" + args.donazione + ".00'></form></center></body></html>";
+
+$.backButton.addEventListener('click', function(e){
+	$.donaweb.close();
+});

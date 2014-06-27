@@ -58,10 +58,10 @@ var conferma = Ti.UI.createButton({
 $.dona.add(conferma);
 
 conferma.addEventListener('click', function (e) {
-	var controller = Alloy.createController('donate', {
+	var controller = Alloy.createController('donaweb', {
 						donazione: importo.value
 					 }).getView().open({ modal : true,
-								        navBarHidden: true,
-								    	fullscreen: true
+								         navBarHidden: true,
+								    	 fullscreen: true
 								    	});
 });

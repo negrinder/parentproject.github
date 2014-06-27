@@ -1,0 +1,6 @@
+<Alloy>
+	<Window>
+		<Button id="backButton" image="arrow110.png" width="64" height="64" />
+		<WebView id="paypalView"/>	
+	</Window>
+</Alloy>

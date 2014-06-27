@@ -64,7 +64,7 @@ function Controller() {
     });
     $.dona.add(conferma);
     conferma.addEventListener("click", function() {
-        Alloy.createController("donate", {
+        Alloy.createController("donaweb", {
             donazione: importo.value
         }).getView().open({
             modal: true,

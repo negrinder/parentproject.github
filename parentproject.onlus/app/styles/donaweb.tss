@@ -1,0 +1,13 @@
+"Window": {
+	backgroundColor: "#ffffff"
+}
+
+"#backButton": {
+	top: 10,
+	tintColor: '#585858',
+	backgroundSelectedColor: '#ff0000'
+}
+
+"#paypalView": {
+	top: 90	
+}
