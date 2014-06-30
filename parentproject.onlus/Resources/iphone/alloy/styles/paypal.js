@@ -1,1 +1,1 @@
-module.exports = [{"isApi":true,"priority":1101.0032999999999,"key":"Window","style":{backgroundColor:"#f4f4f4",titleAttributes:{color:"#ffffff",},statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,}}];
+module.exports = [{"isApi":true,"priority":1101.004,"key":"Window","style":{backgroundColor:"#f4f4f4",titleAttributes:{color:"#ffffff",},statusBarStyle:Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,}}];

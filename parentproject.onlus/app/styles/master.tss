@@ -1,3 +1,7 @@
+"Window": {
+	 navBarHidden: true
+}
+
 "#immagini": {
 	top: 0,
 	height: 242,
@@ -102,13 +106,29 @@
 }
 
 "#image1": {
-	image:'foto-Rick.jpg'
+	image:'/slide/comunita.jpg'
 }
-
 "#image2": {
-	image:'foto-Rick2.jpg'
+	image:'/slide/foto-Rick.jpg'
 }
-
 "#image3": {
-	image:'foto-Rick3.jpg'
+	image:'/slide/conferenza.jpg'
+}
+"#image4": {
+	image:'/slide/daniele.jpg'
+}
+"#image5": {
+	image:'/slide/foto-Rick2.jpg'
+}
+"#image6": {
+	image:'/slide/laboratorio.jpg'
+}
+"#image7": {
+	image:'/slide/ragazzi.jpg'
+}
+"#image8": {
+	image:'/slide/ragazzi2.jpg'
+}
+"#image9": {
+	image:'/slide/Puri.jpg'
 }

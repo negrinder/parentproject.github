@@ -2,13 +2,13 @@
 	<View>
 		<ScrollableView id="scrollableView" showPagingControl="true">
             <View id="view1" backgroundColor="#f4f4f4">
-            	<WebView id="associazione" url="associazione.html" />
+            	<WebView id="associazione" url="/associazione.html" />
             </View>
             <View id="view2" backgroundColor="#f4f4f4">
-            	<WebView id="rete" url="rete.html" />
+            	<WebView id="rete" url="/rete.html" />
             </View>
             <View id="view3" backgroundColor="#f4f4f4">
-            	<WebView id="struttura" url="struttura.html" />
+            	<WebView id="struttura" url="/struttura.html" />
             </View>
         </ScrollableView>
 	</View>

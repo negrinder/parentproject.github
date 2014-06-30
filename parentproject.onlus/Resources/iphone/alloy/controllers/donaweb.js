@@ -16,7 +16,7 @@ function Controller() {
         tintColor: "#585858",
         backgroundSelectedColor: "#ff0000",
         id: "backButton",
-        image: "arrow110.png",
+        image: "/arrow110.png",
         width: "64",
         height: "64"
     });

@@ -29,6 +29,7 @@ function Controller() {
     var exports = {};
     var __defers = {};
     $.__views.master = Ti.UI.createWindow({
+        navBarHidden: true,
         id: "master"
     });
     $.__views.master && $.addTopLevelView($.__views.master);
@@ -43,7 +44,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view1);
     $.__views.image1 = Ti.UI.createImageView({
-        image: "foto-Rick.jpg",
+        image: "/slide/comunita.jpg",
         id: "image1"
     });
     $.__views.view1.add($.__views.image1);
@@ -53,7 +54,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view2);
     $.__views.image2 = Ti.UI.createImageView({
-        image: "foto-Rick2.jpg",
+        image: "/slide/foto-Rick.jpg",
         id: "image2"
     });
     $.__views.view2.add($.__views.image2);
@@ -63,10 +64,70 @@ function Controller() {
     });
     __alloyId3.push($.__views.view3);
     $.__views.image3 = Ti.UI.createImageView({
-        image: "foto-Rick3.jpg",
+        image: "/slide/conferenza.jpg",
         id: "image3"
     });
     $.__views.view3.add($.__views.image3);
+    $.__views.view4 = Ti.UI.createView({
+        id: "view4",
+        backgroundColor: "#f4f4f4"
+    });
+    __alloyId3.push($.__views.view4);
+    $.__views.image4 = Ti.UI.createImageView({
+        image: "/slide/daniele.jpg",
+        id: "image4"
+    });
+    $.__views.view4.add($.__views.image4);
+    $.__views.view5 = Ti.UI.createView({
+        id: "view5",
+        backgroundColor: "#f4f4f4"
+    });
+    __alloyId3.push($.__views.view5);
+    $.__views.image5 = Ti.UI.createImageView({
+        image: "/slide/foto-Rick2.jpg",
+        id: "image5"
+    });
+    $.__views.view5.add($.__views.image5);
+    $.__views.view6 = Ti.UI.createView({
+        id: "view6",
+        backgroundColor: "#f4f4f4"
+    });
+    __alloyId3.push($.__views.view6);
+    $.__views.image6 = Ti.UI.createImageView({
+        image: "/slide/laboratorio.jpg",
+        id: "image6"
+    });
+    $.__views.view6.add($.__views.image6);
+    $.__views.view7 = Ti.UI.createView({
+        id: "view7",
+        backgroundColor: "#f4f4f4"
+    });
+    __alloyId3.push($.__views.view7);
+    $.__views.image7 = Ti.UI.createImageView({
+        image: "/slide/ragazzi.jpg",
+        id: "image7"
+    });
+    $.__views.view7.add($.__views.image7);
+    $.__views.view8 = Ti.UI.createView({
+        id: "view8",
+        backgroundColor: "#f4f4f4"
+    });
+    __alloyId3.push($.__views.view8);
+    $.__views.image8 = Ti.UI.createImageView({
+        image: "/slide/ragazzi2.jpg",
+        id: "image8"
+    });
+    $.__views.view8.add($.__views.image8);
+    $.__views.view9 = Ti.UI.createView({
+        id: "view9",
+        backgroundColor: "#f4f4f4"
+    });
+    __alloyId3.push($.__views.view9);
+    $.__views.image9 = Ti.UI.createImageView({
+        image: "/slide/Puri.jpg",
+        id: "image9"
+    });
+    $.__views.view9.add($.__views.image9);
     $.__views.immagini = Ti.UI.createScrollableView({
         top: 0,
         height: 242,
@@ -121,7 +182,7 @@ function Controller() {
         tintColor: "#585858",
         backgroundSelectedColor: "#ff0000",
         id: "btn1",
-        image: "couple48.png",
+        image: "/couple48.png",
         width: "64",
         height: "64"
     });
@@ -131,7 +192,7 @@ function Controller() {
         right: 163,
         tintColor: "#585858",
         id: "btn2",
-        image: "chisiamo.png",
+        image: "/chisiamo.png",
         width: "64",
         height: "64"
     });
@@ -141,7 +202,7 @@ function Controller() {
         right: 89,
         tintColor: "#585858",
         id: "btn3",
-        image: "arroba2.png",
+        image: "/arroba2.png",
         width: "64",
         height: "64"
     });
@@ -151,7 +212,7 @@ function Controller() {
         right: 15,
         tintColor: "#585858",
         id: "btn4",
-        image: "heart99.png",
+        image: "/heart99.png",
         width: "64",
         height: "64"
     });
@@ -211,7 +272,7 @@ function Controller() {
     $.__views.__alloyId2.add($.__views.contattiContainer);
     $.__views.contatti = Ti.UI.createWebView({
         id: "contatti",
-        url: "contatti.html"
+        url: "/contatti.html"
     });
     $.__views.contattiContainer.add($.__views.contatti);
     $.__views.donaContainer = Ti.UI.createView({

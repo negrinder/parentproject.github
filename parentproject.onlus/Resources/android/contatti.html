@@ -11,12 +11,19 @@ body {
 .titolo {
 	text-align: center;
 	position: fixed;
+	float: left;
 	top: -17;
 	left:0;
 	right:0;
+	z-index: 99;
 }
 .contenuto {
+	position: absolute;
+	float: left;
+	left:0;
+	right:8;
 	padding: 6px 0px;
+	z-index: 98;
 }
 h2 {
 	background-color: #185689;
@@ -66,9 +73,35 @@ h4 {
 .sc {
 	background-color: #7b3136;
 }
-
-
-
+img {
+	border: 2px solid #ccc;
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+.avatar {
+	padding: 0px 5px;
+}
+.nominativo {
+	font-size: 16px;
+	padding-top: 8px;
+	color: #2d2d2d;
+}
+.ruolo {
+	font-size: 12px;
+	color: #111;
+}
+.indirizzo {
+	padding-bottom: 8px;
+}
+.indirizzo a {
+	font-size: 12px;
+	color: #777;
+	text-decoration: none;
+	font-style: italic;
+}
 p {
 	text-align: justify;
 }
@@ -80,17 +113,296 @@ li {
 	<div class="titolo"><h2>Contatti</h2></div>
 	<div class="contenuto">
 		<h4 class="ca">Centro Ascolto</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/tiziana_dauria.jpg" /></td>
+				<td class="nominativo">Tiziana D'Auria</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Assistente Sociale - Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:t.dauria@parentproject.it">t.dauria@parentproject.it</a></td>
+			</tr>			
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/emanuela_giulitti.jpg" /></td>
+				<td class="nominativo">Emanuela Giulitti</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Psicologa)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:e.giulitti@parentproject.it">e.giulitti@parentproject.it</a></td>
+			</tr>			
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/marica_pugliese.jpg" /></td>
+				<td class="nominativo">Marica Pugliese</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Psicologa)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:m.pugliese@parentproject.it">m.pugliese@parentproject.it</a></td>
+			</tr>			
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/luca_guidicini.jpg" /></td>
+				<td class="nominativo">Luca Guidicini</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Fisioterapista)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:l.guidicini@parentproject.it">l.guidicini@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="as">Area Scienza</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/fernanda_deangelis.jpg" /></td>
+				<td class="nominativo">Fernanda De Angelis</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Biologa Molecolare - Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:f.deangelis@parentproject.it">f.deangelis@parentproject.it</a></td>
+			</tr>			
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/mariateresa_moscato.jpg" /></td>
+				<td class="nominativo">Maria Teresa Moscato</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Biologa Molecolare)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:m.moscato@parentproject.it">m.moscato@parentproject.it</a></td>
+			</tr>			
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/susanna_catini.jpg" /></td>
+				<td class="nominativo">Susanna Catini</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Biologa Molecolare)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:s.catini@parentproject.it">s.catini@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="ri">Rapporti Istituzionali</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/filippo_buccella.jpg" /></td>
+				<td class="nominativo">Filippo Buccella</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Presidente)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:presidenza@parentproject.org">presidenza@parentproject.org</a></td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/silvia_starita.jpg" /></td>
+				<td class="nominativo">Silvia Starita</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:segreteria.roma@parentproject.it">segreteria.roma@parentproject.it</a></td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/fabio_amanti.jpg" /></td>
+				<td class="nominativo">Fabio Amanti</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Delegati Regionali)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:f.amanti@parentproject.it">f.amanti@parentproject.it</a></td>
+			</tr>
+		</table>		
 		<h4 class="rf">Raccolta Fondi ed Eventi</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/nicoletta_madia.jpg" /></td>
+				<td class="nominativo">Nicoletta Madia</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:n.madia@parentproject.it">n.madia@parentproject.it</a></td>
+			</tr>			
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/elena_poletti.jpg" /></td>
+				<td class="nominativo">Elena Poletti</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Fundraiser Piemonte)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:e.poletti@parentproject.it">e.poletti@parentproject.it</a></td>
+			</tr>			
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/filippo_bolognesi.jpg" /></td>
+				<td class="nominativo">Filippo Riccardo Bolognesi</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Fundraiser Lombardia)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:f.bolognesi@parentproject.org">f.bolognesi@parentproject.org</a></td>
+			</tr>			
+		</table>
 		<h4 class="co">Coordinamento</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/nicoletta_madia.jpg" /></td>
+				<td class="nominativo">Nicoletta Madia</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:n.madia@parentproject.it">n.madia@parentproject.it</a></td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/tiziana_dauria.jpg" /></td>
+				<td class="nominativo">Tiziana D'Auria</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Assistente Sociale - Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:t.dauria@parentproject.it">t.dauria@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="cm">Comunicazione</h4>
-		
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/fiammetta_biancatelli.jpg" /></td>
+				<td class="nominativo">Fiammetta Biancatelli</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area Stampa)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:f.biancatelli@parentproject.it">f.biancatelli@parentproject.it</a></td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/niccolo_patriarca.jpg" /></td>
+				<td class="nominativo">Niccolò Patriarca</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area Web)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:n.patriarca@parentproject.it">n.patriarca@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="pr">Progettazione Sociale</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/francesca_buontempi.jpg" /></td>
+				<td class="nominativo">Francesca Buontempi</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:f.buontempi@parentproject.it">f.buontempi@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="am">Amministrazione e Contabilità</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/emilio_lodise.jpg" /></td>
+				<td class="nominativo">Emilio Lodise</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:contabilita@parentproject.it">contabilita@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="sg">Segreteria</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/lucilla_patrizi.jpg" /></td>
+				<td class="nominativo">Lucilla Patrizi</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:associazione@parentproject.it">associazione@parentproject.it</a></td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/fabiana_boccia.jpg" /></td>
+				<td class="nominativo">Fabiana Boccia</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:f.boccia@parentproject.it">f.boccia@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="gr">Grafica</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/monia_pellegrini.jpg" /></td>
+				<td class="nominativo">Monia Pellegrini</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Responsabile Area)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:m.pellegrini@parentproject.it">m.pellegrini@parentproject.it</a></td>
+			</tr>
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/aurora_giacalone.jpg" /></td>
+				<td class="nominativo">Aurora Giacalone</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(Grafico)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:a.giacalone@parentproject.it">a.giacalone@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="it">ITC</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="3" class="avatar"><img src="avatar/andrea_negroni.png" /></td>
+				<td class="nominativo">Andrea Negroni</td>
+			</tr>
+			<tr>
+				<td class="ruolo">(ICT Solution Architect)</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:a.negroni@parentproject.it">a.negroni@parentproject.it</a></td>
+			</tr>
+		</table>
 		<h4 class="sc">Sede Centrale</h4>
+		<table border="0">
+			<tr>
+				<td rowspan="5" class="avatar"><img src="blank.jpg" /></td>
+				<td class="nominativo">Associazione</td>
+			</tr>
+			<tr>
+				<td class="ruolo">Via Nicola Coviello 12/14 - 00165 Roma</td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="tel:+390666182811">+39 06 66182811</a></td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="fax:+390666188428">+39 06 66188428</a></td>
+			</tr>
+			<tr>
+				<td class="indirizzo"><a href="email:associazione@parentproject.it">associazione@parentproject.it</a></td>
+			</tr>
+		</table>
 
 </div></body></html>

@@ -11,14 +11,32 @@
 	            <View id="view3" backgroundColor="#f4f4f4">
 	            	<ImageView id="image3"/>
 	            </View>
+	            <View id="view4" backgroundColor="#f4f4f4">
+	            	<ImageView id="image4"/>
+	            </View>
+	            <View id="view5" backgroundColor="#f4f4f4">
+	            	<ImageView id="image5"/>
+	            </View>
+	            <View id="view6" backgroundColor="#f4f4f4">
+	            	<ImageView id="image6"/>
+	            </View>
+	            <View id="view7" backgroundColor="#f4f4f4">
+	            	<ImageView id="image7"/>
+	            </View>
+	            <View id="view8" backgroundColor="#f4f4f4">
+	            	<ImageView id="image8"/>
+	            </View>
+	            <View id="view9" backgroundColor="#f4f4f4">
+	            	<ImageView id="image9"/>
+	            </View>
 	        </ScrollableView>
 	        <View id="bordoTop">
 	        </View>
 	        <View id="barra" textAlign="right">
-	        	<Button id="btn1" image="couple48.png" width="64" height="64"></Button>
-	        	<Button id="btn2" image="chisiamo.png" width="64" height="64"></Button>
-	        	<Button id="btn3" image="arroba2.png" width="64" height="64"></Button>
-	        	<Button id="btn4" image="heart99.png" width="64" height="64"></Button>
+	        	<Button id="btn1" image="/couple48.png" width="64" height="64"></Button>
+	        	<Button id="btn2" image="/chisiamo.png" width="64" height="64"></Button>
+	        	<Button id="btn3" image="/arroba2.png" width="64" height="64"></Button>
+	        	<Button id="btn4" image="/heart99.png" width="64" height="64"></Button>
 	        </View>
 	        <View id="bordoBottom">
 	        </View>
@@ -35,7 +53,7 @@
 				<Require id="about" src="about"/>
 			</View>
 			<View id="contattiContainer">
-				<WebView id="contatti" url="contatti.html" />
+				<WebView id="contatti" url="/contatti.html" />
 			</View>
 			<View id="donaContainer">
 				<Require id="paypal" src="paypal"/>
