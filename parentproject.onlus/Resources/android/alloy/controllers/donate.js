@@ -77,7 +77,7 @@ function Controller() {
     var u = void 0 != Ti.Android ? "dp" : 0;
     var indietro = Ti.UI.createButton({
         top: 10 + u,
-        image: "arrow110.png",
+        image: "/arrow110.png",
         width: 64,
         height: 64,
         tintColor: "#585858",

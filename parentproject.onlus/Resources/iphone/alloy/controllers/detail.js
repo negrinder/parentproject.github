@@ -17,12 +17,12 @@ function Controller() {
     $.__views.detail.add($.__views.__alloyId1);
     $.__views.backButton = Ti.UI.createButton({
         top: 10,
+        image: "/arrow110.png",
+        width: 64,
+        height: 40,
         tintColor: "#585858",
         backgroundSelectedColor: "#ff0000",
-        id: "backButton",
-        image: "arrow110.png",
-        width: "64",
-        height: "64"
+        id: "backButton"
     });
     $.__views.__alloyId1.add($.__views.backButton);
     $.__views.colore = Ti.UI.createView({
@@ -42,6 +42,7 @@ function Controller() {
             fontSize: "16dp",
             fontWeight: "bold"
         },
+        color: "#000",
         textAlign: "center",
         id: "titolo"
     });

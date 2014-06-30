@@ -1,7 +1,7 @@
 <Alloy>
 	<Window>
 		<View>
-			<Button id="backButton" image="arrow110.png" width="64" height="64" />
+			<Button id="backButton" />
 			<View id="colore"/>
 			<Label id="titolo"/>
 			<WebView id="contenuto"/>

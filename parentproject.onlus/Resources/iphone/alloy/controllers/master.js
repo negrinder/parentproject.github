@@ -44,7 +44,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view1);
     $.__views.image1 = Ti.UI.createImageView({
-        image: "/slide/comunita.jpg",
+        image: "/slide/ios/comunita.jpg",
         id: "image1"
     });
     $.__views.view1.add($.__views.image1);
@@ -54,7 +54,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view2);
     $.__views.image2 = Ti.UI.createImageView({
-        image: "/slide/foto-Rick.jpg",
+        image: "/slide/ios/foto-Rick.jpg",
         id: "image2"
     });
     $.__views.view2.add($.__views.image2);
@@ -64,7 +64,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view3);
     $.__views.image3 = Ti.UI.createImageView({
-        image: "/slide/conferenza.jpg",
+        image: "/slide/ios/conferenza.jpg",
         id: "image3"
     });
     $.__views.view3.add($.__views.image3);
@@ -74,7 +74,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view4);
     $.__views.image4 = Ti.UI.createImageView({
-        image: "/slide/daniele.jpg",
+        image: "/slide/ios/daniele.jpg",
         id: "image4"
     });
     $.__views.view4.add($.__views.image4);
@@ -84,7 +84,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view5);
     $.__views.image5 = Ti.UI.createImageView({
-        image: "/slide/foto-Rick2.jpg",
+        image: "/slide/ios/foto-Rick2.jpg",
         id: "image5"
     });
     $.__views.view5.add($.__views.image5);
@@ -94,7 +94,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view6);
     $.__views.image6 = Ti.UI.createImageView({
-        image: "/slide/laboratorio.jpg",
+        image: "/slide/ios/laboratorio.jpg",
         id: "image6"
     });
     $.__views.view6.add($.__views.image6);
@@ -104,7 +104,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view7);
     $.__views.image7 = Ti.UI.createImageView({
-        image: "/slide/ragazzi.jpg",
+        image: "/slide/ios/ragazzi.jpg",
         id: "image7"
     });
     $.__views.view7.add($.__views.image7);
@@ -114,7 +114,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view8);
     $.__views.image8 = Ti.UI.createImageView({
-        image: "/slide/ragazzi2.jpg",
+        image: "/slide/ios/ragazzi2.jpg",
         id: "image8"
     });
     $.__views.view8.add($.__views.image8);
@@ -124,7 +124,7 @@ function Controller() {
     });
     __alloyId3.push($.__views.view9);
     $.__views.image9 = Ti.UI.createImageView({
-        image: "/slide/Puri.jpg",
+        image: "/slide/ios/puri.jpg",
         id: "image9"
     });
     $.__views.view9.add($.__views.image9);
@@ -180,7 +180,8 @@ function Controller() {
         top: -7,
         right: 237,
         tintColor: "#585858",
-        backgroundSelectedColor: "#ff0000",
+        backgroundColor: "transparent",
+        borderColor: "transparent",
         id: "btn1",
         image: "/couple48.png",
         width: "64",
@@ -191,6 +192,8 @@ function Controller() {
         top: -7,
         right: 163,
         tintColor: "#585858",
+        backgroundColor: "transparent",
+        borderColor: "transparent",
         id: "btn2",
         image: "/chisiamo.png",
         width: "64",
@@ -201,6 +204,8 @@ function Controller() {
         top: -7,
         right: 89,
         tintColor: "#585858",
+        backgroundColor: "transparent",
+        borderColor: "transparent",
         id: "btn3",
         image: "/arroba2.png",
         width: "64",
@@ -211,6 +216,8 @@ function Controller() {
         top: -7,
         right: 15,
         tintColor: "#585858",
+        backgroundColor: "transparent",
+        borderColor: "transparent",
         id: "btn4",
         image: "/heart99.png",
         width: "64",

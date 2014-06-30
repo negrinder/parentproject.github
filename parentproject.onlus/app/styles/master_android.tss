@@ -1,0 +1,128 @@
+"Window": {
+	 navBarHidden: true
+}
+
+"#master[platform=android]": {
+    exitOnClose: true
+}
+
+"#immagini": {
+	top: 0,
+	height: 240,
+	
+	separatorStyle: 0,
+	borderWidth:0,
+
+	backgroundColor:'transparent',
+	showPagingControl:true,
+	pagingControlHeight:30,
+	pageIndicatorTintColor:'gray',
+	currentPageIndicatorTintColor:'black',
+	overlayEnabled:true,
+	pagingControlColor:'transparent'
+}
+
+"#bordoTop": {
+	top: 240,
+	height: 1,
+	backgroundColor: '#9e9e9e'
+}
+
+"#barra": {
+	top: 241,
+	height: 50,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#eeeeee', offset: 0.0 }, 
+        		  { color: '#d0d0d0', offset: 1.0 }]
+   }
+}
+
+"#bordoBottom": {
+	top: 291,
+	height: 1,
+	backgroundColor: '#9e9e9e'
+}
+
+"#btn1":{
+	right: 247,
+	tintColor: '#585858',
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
+}
+
+"#btn2":{
+	right: 173,
+	tintColor: '#585858',
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
+}
+
+"#btn3":{
+	right: 99,
+	tintColor: '#585858',
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
+}
+
+"#btn4":{
+	right: 20,
+	tintColor: '#585858',
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
+}
+
+"#notizieContainer": {
+	top: 292,
+	backgroundColor: '#fff'
+}
+
+"#chisiamoContainer": {
+	top: 292,
+	backgroundColor: '#fff'
+}
+
+"#contattiContainer": {
+	top: 292,
+	backgroundColor: '#fff'
+}
+
+"#donaContainer": {
+	top: 292,
+	backgroundColor: '#fff'
+}
+
+"#notizie": {
+	separatorStyle: 0,
+    borderWidth:0
+}
+
+"#image1": {
+	image:'/slide/android/comunita.jpg'
+}
+"#image2": {
+	image:'/slide/android/foto-Rick.jpg'
+}
+"#image3": {
+	image:'/slide/android/conferenza.jpg'
+}
+"#image4": {
+	image:'/slide/android/daniele.jpg'
+}
+"#image5": {
+	image:'/slide/android/foto-Rick2.jpg'
+}
+"#image6": {
+	image:'/slide/android/laboratorio.jpg'
+}
+"#image7": {
+	image:'/slide/android/ragazzi.jpg'
+}
+"#image8": {
+	image:'/slide/android/ragazzi2.jpg'
+}
+"#image9": {
+	image:'/slide/android/puri.jpg'
+}

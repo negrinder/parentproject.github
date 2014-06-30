@@ -1,3 +1,4 @@
 <Alloy>
-	<Require id="master" src="master"/>
+	<Require id="master" src="master" platform="ios" />
+	<Require id="master" src="master_android" platform="android" />
 </Alloy>

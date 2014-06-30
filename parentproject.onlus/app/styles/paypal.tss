@@ -5,6 +5,7 @@
 	},
 	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 }
+
 "Window[platform=android]": {
 	backgroundColor: "#f4f4f4",
 	titleAttributes: {

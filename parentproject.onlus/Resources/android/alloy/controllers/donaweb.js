@@ -13,12 +13,10 @@ function Controller() {
     $.__views.donaweb && $.addTopLevelView($.__views.donaweb);
     $.__views.backButton = Ti.UI.createButton({
         top: 10,
+        image: "/arrow110.png",
         tintColor: "#585858",
         backgroundSelectedColor: "#ff0000",
-        id: "backButton",
-        image: "arrow110.png",
-        width: "64",
-        height: "64"
+        id: "backButton"
     });
     $.__views.donaweb.add($.__views.backButton);
     $.__views.paypalView = Ti.UI.createWebView({

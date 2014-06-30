@@ -2,8 +2,18 @@
 	backgroundColor: "#ffffff"
 }
 
-"#backButton": {
+"#backButton[platform=ios]": {
 	top: 10,
+	image: "/arrow110.png",
+	width: 64,
+	height: 40,
+	tintColor: '#585858',
+	backgroundSelectedColor: '#ff0000'
+}
+
+"#backButton[platform=android]": {
+	top: 10,
+	image: "/arrow110.png",
 	tintColor: '#585858',
 	backgroundSelectedColor: '#ff0000'
 }
@@ -24,7 +34,8 @@
         fontSize: '16dp',
         fontWeight: 'bold'
     },	
-    textAlign: 'center'
+	color: '#000',
+	textAlign: 'center'
 }
 
 "WebView": {

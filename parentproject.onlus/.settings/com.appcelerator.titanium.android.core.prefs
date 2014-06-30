@@ -1,11 +1,11 @@
 android/ATTR_MINIFY=true
 android/ATTR_PROJECT_NAME=Parent Project Onlus
 android/abi=armeabi-v7a
-android/distribute_path=
-android/key_password=
-android/keystore_alias=
-android/keystore_password=
-android/keystore_path=
-android/recent_output=
+android/distribute_path=/Users/andrea/Downloads/publish
+android/key_password=Parentp1
+android/keystore_alias=parentproject.onlus
+android/keystore_password=Parentp1
+android/keystore_path=/Users/andrea/Downloads/publish/ppapp
+android/recent_output=/Users/andrea/Downloads/publish
 android/sdk_version=4.1.2
 eclipse.preferences.version=1

@@ -6,7 +6,7 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.master = Alloy.createController("master", {
+    $.__views.master = Alloy.createController("master_android", {
         id: "master"
     });
     $.__views.master && $.addTopLevelView($.__views.master);

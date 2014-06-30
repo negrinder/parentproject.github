@@ -2,6 +2,10 @@
 	 navBarHidden: true
 }
 
+"#master[platform=android]": {
+    exitOnClose: true
+}
+
 "#immagini": {
 	top: 0,
 	height: 242,
@@ -31,7 +35,7 @@
         type: 'linear',
         startPoint: { x: '0%', y: '0%' },
         endPoint: { x: '0%', y: '100%' },
-        colors: [ { color: '#eeeeee', offset: 0.0}, 
+        colors: [ { color: '#eeeeee', offset: 0.0 }, 
         		  { color: '#d0d0d0', offset: 1.0 }]
    }
 }
@@ -59,25 +63,32 @@
 	top: -7,
 	right: 237,
 	tintColor: '#585858',
-	backgroundSelectedColor: '#ff0000'
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
 }
 
 "#btn2":{
 	top: -7,
 	right: 163,
-	tintColor: '#585858'
+	tintColor: '#585858',
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
 }
 
 "#btn3":{
 	top: -7,
 	right: 89,
-	tintColor: '#585858'
+	tintColor: '#585858',
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
 }
 
 "#btn4":{
 	top: -7,
 	right: 15,
-	tintColor: '#585858'
+	tintColor: '#585858',
+	backgroundColor: 'transparent',
+    borderColor: 'transparent'
 }
 
 "#notizieContainer": {
@@ -106,29 +117,29 @@
 }
 
 "#image1": {
-	image:'/slide/comunita.jpg'
+	image:'/slide/ios/comunita.jpg'
 }
 "#image2": {
-	image:'/slide/foto-Rick.jpg'
+	image:'/slide/ios/foto-Rick.jpg'
 }
 "#image3": {
-	image:'/slide/conferenza.jpg'
+	image:'/slide/ios/conferenza.jpg'
 }
 "#image4": {
-	image:'/slide/daniele.jpg'
+	image:'/slide/ios/daniele.jpg'
 }
 "#image5": {
-	image:'/slide/foto-Rick2.jpg'
+	image:'/slide/ios/foto-Rick2.jpg'
 }
 "#image6": {
-	image:'/slide/laboratorio.jpg'
+	image:'/slide/ios/laboratorio.jpg'
 }
 "#image7": {
-	image:'/slide/ragazzi.jpg'
+	image:'/slide/ios/ragazzi.jpg'
 }
 "#image8": {
-	image:'/slide/ragazzi2.jpg'
+	image:'/slide/ios/ragazzi2.jpg'
 }
 "#image9": {
-	image:'/slide/Puri.jpg'
+	image:'/slide/ios/puri.jpg'
 }

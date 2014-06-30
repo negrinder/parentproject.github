@@ -66,6 +66,7 @@ function Controller() {
             fontSize: "16dp",
             fontWeight: "bold"
         },
+        color: "#000",
         textAlign: "left",
         verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
         id: "title"
