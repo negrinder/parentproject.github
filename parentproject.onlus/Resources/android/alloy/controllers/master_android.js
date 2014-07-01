@@ -173,43 +173,55 @@ function Controller() {
             } ]
         },
         id: "barra",
-        textAlign: "right"
+        layout: "horizontal"
     });
     $.__views.__alloyId4.add($.__views.barra);
     $.__views.btn1 = Ti.UI.createButton({
-        right: 247,
+        backgroundImage: "/images/couple48.png",
+        width: 64,
+        height: 64,
+        top: -7,
+        left: 20,
         tintColor: "#585858",
         backgroundColor: "transparent",
         borderColor: "transparent",
-        id: "btn1",
-        image: "/images/couple48.png"
+        id: "btn1"
     });
     $.__views.barra.add($.__views.btn1);
     $.__views.btn2 = Ti.UI.createButton({
-        right: 173,
+        backgroundImage: "/images/chisiamo.png",
+        width: 64,
+        height: 64,
+        top: -7,
+        left: 20,
         tintColor: "#585858",
         backgroundColor: "transparent",
         borderColor: "transparent",
-        id: "btn2",
-        image: "/images/chisiamo.png"
+        id: "btn2"
     });
     $.__views.barra.add($.__views.btn2);
     $.__views.btn3 = Ti.UI.createButton({
-        right: 99,
+        backgroundImage: "/images/arroba2.png",
+        width: 64,
+        height: 64,
+        top: -7,
+        left: 20,
         tintColor: "#585858",
         backgroundColor: "transparent",
         borderColor: "transparent",
-        id: "btn3",
-        image: "/images/arroba2.png"
+        id: "btn3"
     });
     $.__views.barra.add($.__views.btn3);
     $.__views.btn4 = Ti.UI.createButton({
-        right: 20,
+        backgroundImage: "/images/heart99.png",
+        width: 64,
+        height: 64,
+        top: -7,
+        left: 20,
         tintColor: "#585858",
         backgroundColor: "transparent",
         borderColor: "transparent",
-        id: "btn4",
-        image: "/images/heart99.png"
+        id: "btn4"
     });
     $.__views.barra.add($.__views.btn4);
     $.__views.bordoBottom = Ti.UI.createView({
@@ -267,6 +279,7 @@ function Controller() {
     $.__views.paypal.setParent($.__views.donaContainer);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    arguments[0] || {};
     var rss = require("rss");
     refreshRss();
     $.btn1.addEventListener("click", function() {

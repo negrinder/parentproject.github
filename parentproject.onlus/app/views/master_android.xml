@@ -32,11 +32,11 @@
 	        </ScrollableView>
 	        <View id="bordoTop">
 	        </View>
-	        <View id="barra" textAlign="right">
-	        	<Button id="btn1" image="/images/couple48.png"></Button>
-	        	<Button id="btn2" image="/images/chisiamo.png"></Button>
-	        	<Button id="btn3" image="/images/arroba2.png"></Button>
-	        	<Button id="btn4" image="/images/heart99.png"></Button>
+	        <View id="barra" layout="horizontal">
+	        	<Button id="btn1"></Button>
+	        	<Button id="btn2"></Button>
+	        	<Button id="btn3"></Button>
+	        	<Button id="btn4"></Button>
 	        </View>
 	        <View id="bordoBottom">
 	        </View>

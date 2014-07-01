@@ -17,7 +17,9 @@ function Controller() {
     $.__views.detail.add($.__views.__alloyId1);
     $.__views.backButton = Ti.UI.createButton({
         top: 10,
-        image: "/arrow110.png",
+        width: 64,
+        height: 40,
+        backgroundImage: "/images/arrow110.png",
         tintColor: "#585858",
         backgroundSelectedColor: "#ff0000",
         id: "backButton"

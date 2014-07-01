@@ -13,7 +13,9 @@
 
 "#backButton[platform=android]": {
 	top: 10,
-	image: "/arrow110.png",
+	width: 64,
+	height: 40,
+	backgroundImage: "/images/arrow110.png",
 	tintColor: '#585858',
 	backgroundSelectedColor: '#ff0000'
 }

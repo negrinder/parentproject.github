@@ -46,29 +46,46 @@
 	backgroundColor: '#9e9e9e'
 }
 
+
 "#btn1":{
-	right: 247,
+	backgroundImage: '/images/couple48.png',
+	width: 64,
+	height: 64,
+	top: -7,
+	left: 20,
 	tintColor: '#585858',
 	backgroundColor: 'transparent',
     borderColor: 'transparent'
 }
 
 "#btn2":{
-	right: 173,
+	backgroundImage: '/images/chisiamo.png',
+	width: 64,
+	height: 64,
+	top: -7,
+	left: 20,
 	tintColor: '#585858',
 	backgroundColor: 'transparent',
     borderColor: 'transparent'
 }
 
 "#btn3":{
-	right: 99,
+	backgroundImage: '/images/arroba2.png',
+	width: 64,
+	height: 64,
+	top: -7,
+	left: 20,
 	tintColor: '#585858',
 	backgroundColor: 'transparent',
     borderColor: 'transparent'
 }
 
 "#btn4":{
-	right: 20,
+	backgroundImage: '/images/heart99.png',
+	width: 64,
+	height: 64,
+	top: -7,
+	left: 20,
 	tintColor: '#585858',
 	backgroundColor: 'transparent',
     borderColor: 'transparent'
