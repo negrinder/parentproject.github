@@ -22,7 +22,9 @@ function Controller() {
             fullscreen: true
         });
     });
-    $.master.getView().open();
+    setTimeout(function() {
+        $.master.getView().open();
+    }, 1e4);
     _.extend($, exports);
 }
 
